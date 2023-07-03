@@ -2,10 +2,12 @@ package com.uploader.playerstatscsvuploaderapi.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
-public class WideRecieverAdvancedStats {
+@NoArgsConstructor
+public class PlayerAdvancedStats {
     private long id;
 
     private String name;
@@ -22,6 +24,24 @@ public class WideRecieverAdvancedStats {
 
     private int gamesPlayed;
 
+    private int rushAttempts;
+
+    private int rushYards;
+
+    private int firstDownRushes;
+
+    private int yardsBeforeContact;
+
+    private double rushingYardsBeforeContactPerRushingAttempt;
+
+    private int rushingYardsAfterContact;
+
+    private double rushingYardsAfterContactPerRush;
+
+    private int brokenTacklesRushing;
+
+    private double rushAttemptsPerBrokenTackle;
+
     private int passTargets;
 
     private int receptions;
@@ -30,7 +50,7 @@ public class WideRecieverAdvancedStats {
 
     private int firstDownReceiving;
 
-    private int totalYdsTrvInAirBeforeCatch;
+    private int yardsBeforeCatch;
 
     private double yardsBeforeCatchPerReception;
 
@@ -51,22 +71,4 @@ public class WideRecieverAdvancedStats {
     private int intsOnPassesTargeted;
 
     private double passerRatingsOnPassesTargeted;
-
-    private int rushAttempts;
-
-    private int rushYards;
-
-    private int firstDownRushes;
-
-    private int yardsBeforeContact;
-
-    private double rushingYardsBeforeContactPerRushingAttempt;
-
-    private int rushingYardsAfterContact;
-
-    private double rushingYardsAfterContactPerRush;
-
-    private int brokenTacklesRushing;
-
-    private double rushAttemptsPerBrokenTackle;
 }

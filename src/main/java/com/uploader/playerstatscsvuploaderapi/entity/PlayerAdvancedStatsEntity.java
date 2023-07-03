@@ -1,25 +1,35 @@
-package com.uploader.playerstatscsvuploaderapi.model;
+package com.uploader.playerstatscsvuploaderapi.entity;
 
-import lombok.AllArgsConstructor;
+import jakarta.persistence.*;
 import lombok.Data;
 
+@Entity
 @Data
-@AllArgsConstructor
-public class RunningBacksAdvancedStats {
+@Table(name = "player_adavanced_stats")
+public class PlayerAdvancedStatsEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Column(nullable = false)
     private String name;
 
+    @Column(nullable = false)
     private int year;
 
+    @Column(nullable = false)
     private int age;
 
+    @Column(nullable = false)
     private String team;
 
+    @Column(nullable = false)
     private String position;
 
+    @Column(nullable = false)
     private int teamNumber;
 
+    @Column(nullable = false)
     private int gamesPlayed;
 
     private int rushAttempts;
@@ -48,7 +58,7 @@ public class RunningBacksAdvancedStats {
 
     private int firstDownReceiving;
 
-    private int totalYdsTrvInAirBeforeCatch;
+    private int yardsBeforeCatch;
 
     private double yardsBeforeCatchPerReception;
 
